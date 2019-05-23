@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>To List</title>
+</head>
+<body>
+<a href="/add">Add another item</a><br/>
+<div th:each="todo:${todos}">
+    <h4 th:inline="text">The work of <span style="color:red;">[[${todo.title}]]</span> needs to be done by <span style="color: red">[[${todo.duedate}]]</span>.<br/>
+        This work's priority is <span style="color: red;">[[${todo.priority}]]</span>.
+    </h4>
+
+</div>
+</body>
+</html>
